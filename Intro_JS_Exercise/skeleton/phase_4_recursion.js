@@ -48,3 +48,18 @@ var deepDup = function(arr){
 function type(el){
   return Object.prototype.toString.call(el).slice(8,-1);
 }
+
+var bsearch = (arr, target) => {
+  if(arr.length === 0){return -1;}
+  let middle = Math.floor(arr.length / 2);
+  if (arr[middle] === target) {return middle;}
+  else if (target < arr[middle]) {
+    let left = arr.slice(0,middle);
+    return bsearch(left,target);
+  }
+  else{
+    let right = arr.slice(middle + 1);
+    let pos = bsearch(right,target);
+    return pos === -1 ? -1 : pos + middle + 1;
+  }
+}
