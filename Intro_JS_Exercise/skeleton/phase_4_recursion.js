@@ -82,3 +82,11 @@ var merge = (left,right) => {
   }
   return result.concat(left,right);
 }
+
+function subsets(arr) {
+  if (arr.length === 0) {return [[]];}
+  let first = arr[0];
+  let subs = subsets(arr.slice(1));
+  let combined = subs.map(x => [first].concat(x))
+  return subs.concat(combined);
+}
