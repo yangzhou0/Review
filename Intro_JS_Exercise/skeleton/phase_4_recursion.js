@@ -30,3 +30,12 @@ function exponent2(base,exp){
     return Math.pow(exponent2(base, (exp - 1) / 2),2) * base;
   }
 }
+
+var fibonacci = (n) => {
+  if (n === 2) {return [1,1]}
+  else if (n === 1) {return [1];}
+  var last = fibonacci(n-1).pop() + fibonacci(n-2).pop();
+  var result = fibonacci(n-1);
+  result.push(last);
+  return result;
+}
