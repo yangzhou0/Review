@@ -63,3 +63,22 @@ var bsearch = (arr, target) => {
     return pos === -1 ? -1 : pos + middle + 1;
   }
 }
+
+function mergesort(arr){
+  if (arr.length === 1) {return arr;}
+  let middle = Math.floor(arr.length / 2);
+  let left = arr.slice(0,middle);
+  let right = arr.slice(middle);
+  let sortedleft = mergesort(left);
+  let sortedright = mergesort(right);
+  return merge(sortedleft,sortedright);
+}
+
+var merge = (left,right) => {
+  let result = [];
+  while (left.length > 0 && right.length > 0){
+    let comp = left[0] - right[0]
+    comp < 0 ? result.push(left.shift()) : result.push(right.shift());
+  }
+  return result.concat(left,right);
+}
