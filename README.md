@@ -1,6 +1,6 @@
 # JS-exercise
 
-** Some JS practice questions such as: **
+**Some JS practice questions such as:**
 - Arrays
 - Enumerables
 - Iteration
