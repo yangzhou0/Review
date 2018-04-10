@@ -39,3 +39,12 @@ var fibonacci = (n) => {
   result.push(last);
   return result;
 }
+
+var deepDup = function(arr){
+  if (type(arr) !== 'Array'){return arr;}
+  return arr.map(el => deepDup(el));
+
+}
+function type(el){
+  return Object.prototype.toString.call(el).slice(8,-1);
+}
