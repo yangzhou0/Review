@@ -31,7 +31,7 @@ Student.prototype.courseLoad = function(){
   },{});
 };
 
-//comment in below to test
+//comment in below to test, see more at appAcademy JS W5D4 exercise
 // let student1 = new Student("Nigel", "Leffler");
 // let course1 = new Course("101", "CS", 3, ["mon", "wed", "fri"], 1);
 // let course2 = new Course("201", "CS", 3, ["wed"], 1);
